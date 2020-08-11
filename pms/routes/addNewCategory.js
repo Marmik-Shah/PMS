@@ -62,7 +62,7 @@ function checkUserName(req, res, next) {
     });
 }
 
-router.get("/", checkLoginUser, function (req, res, next) {
+router.get("/", checkLoginUser, function(req, res, next) {
     var loginUser = localStorage.getItem("loginUser");
     res.render("addNewCategory", {
         title: "Password Management System",
@@ -75,13 +75,12 @@ router.get("/", checkLoginUser, function (req, res, next) {
 
 router.post(
     "/",
-    checkLoginUser,
-    [
+    checkLoginUser, [
         check("passwordCategory", "Enter Password Category Name").isLength({
             min: 1,
         }),
     ],
-    function (req, res, next) {
+    function(req, res, next) {
         var loginUser = localStorage.getItem("loginUser");
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -96,7 +95,7 @@ router.post(
             var passCatDetails = new passcatModel({
                 password_category: passCatName
             });
-            passCatDetails.save(function (err, data) {
+            passCatDetails.save(function(err, data) {
                 if (err) throw err;
                 res.render("addNewCategory", {
                     title: "Password Management System",
