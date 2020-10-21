@@ -3,6 +3,9 @@
   "home": "https://Marmik-Shah.github.io/PMS",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "12.19.0"
+  },
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -10,6 +13,7 @@
     "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
@@ -17,6 +21,7 @@
     "express-session": "^1.17.1",
     "express-validator": "^6.6.0",
     "gh-pages": "^3.1.0",
+    "helmet": "^4.1.1",
     "http-errors": "~1.6.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.24",
